@@ -74,10 +74,39 @@
         </a>
         <ul>
             <!-- Icone usuário -->
-            <li class="nav-item"><a href="#" class="nav-link" role="button"><i class="bi bi-person-circle"></i></a>
-            </li>
-        </ul>
-    </nav>
+            <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
+<li class="nav-item dropdown">
+
+    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2"
+       href="#"
+       id="adminDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       aria-expanded="false">
+
+        <i class="bi bi-person-circle" style="font-size: 1.3rem;"></i>
+
+        <?php if(isset($_SESSION['admin_logado'])): ?>
+            <span>Administrador</span>
+        <?php endif; ?>
+
+    </a>
+
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="adminDropdown">
+
+        <li>
+            <a class="dropdown-item text-danger" href="logout.php?origem=admin">
+                <i class="bi bi-box-arrow-right"></i>Sair</a>
+        </li>
+    </ul>
+</li>
+</ul>
+</nav>
 </header>
 <?php include "conexaoBD.php";
 // 2. Busca todas as mensagens enviadas, ordenando pelas mais recentes
