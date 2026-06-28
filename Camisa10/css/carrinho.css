@@ -1,0 +1,130 @@
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 70px;
+}
+.info{
+    margin-top: 150px;
+    display: flex;
+}
+.caixa-produto{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 800px;
+    background-color: transparent;
+    height: 150px;
+    border: 1px solid rgba(0, 0, 0, 0.325);
+    border-radius: 10px;
+    margin: 30px;
+}
+.caixa-produto .img-produto-carrinho{
+    justify-content: flex-start;
+}
+.caixa-produto .info-produto-carrinho h3, .caixa-produto .info-produto-carrinho p{
+    margin: 10px;
+    font-size: 0.95em;
+}
+.caixa-produto .seletores-carrinho h4{
+    background: none;
+}
+.caixa-produto .seletores-carrinho{
+    display: flex;
+    align-items: center;
+    font-size: 1.7em;
+    gap: 20px;
+}
+.caixa-produto .seletores-carrinho i{
+    color: rgba(0, 0, 0, 0.314);
+}
+.caixa-produto .preco-produto-carrinho{
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.314);
+}
+.info-compras{
+    width: 500px;
+    height: 375px;
+    background-color: transparent;
+    margin: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.325);
+}
+.info-compras .info-compras2{
+    display: flex;
+    justify-content: space-between;
+}
+.info-compras .info-compras2 .info-text, .info-compras .info-preco{
+    margin: 40px;
+    color: #000;
+}
+.info-compras .btn-compras button{
+  width: calc(100% - 32px);
+  margin: 12px 16px 8px 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #ff0606;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+}
+.info-compras .btn-compras button a{
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width:100%;
+}
+.info-frete, .info-cupom{
+    margin-left: 30px;
+}
+.info-frete .frete-label, .info-cupom .cupom-label{
+    display: block;
+    font-weight: 600;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.info-frete input, .info-cupom input{
+    width: 400px;
+    height: 70px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.325);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+@media (max-width: 900px){
+    .info{
+        margin-top: 120px;
+        flex-direction: column;
+    }
+    .caixa-produto{
+        width: 500px;
+        height: 120px;
+        padding: 10px;
+    }
+    .caixa-produto .info-produto-carrinho h3, .caixa-produto .info-produto-carrinho p{
+        margin: 10px;
+        font-size: 0.7em;
+    }
+    .caixa-produto .seletores-carrinho{
+        font-size: 1em;
+    }
+    .caixa-produto .preco-produto-carrinho h4{
+        font-size: 1.3em;
+    }
+    .info-compras{
+        width: 500px;
+        height: 365px;
+    }
+    .info-compras .info-compras2 .info-text, .info-compras .info-preco{
+        margin: 30px;
+        font-size: 0.9rem;
+    }
+    .info-compras .btn-compras button{
+         width: 90%;
+    }
+    .info-frete input, .info-cupom input{
+        width:70%;
+        height: 50px;
+    }
+}

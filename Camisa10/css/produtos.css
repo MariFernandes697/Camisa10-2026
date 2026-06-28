@@ -1,0 +1,220 @@
+.barra-de-pesquisa{
+    width: 400px;
+}
+.barra-de-pesquisa input {
+    flex: 1; 
+    height: 90%;
+}
+main {
+    margin-top: 80px; /* mesmo valor da altura do header */
+}
+/* Caixa produtos */
+.topo{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -15px;
+}
+.caixa-filtro{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 12px;
+    margin: 40px 5%;
+    flex-wrap: wrap;
+}
+.filtro-label{
+    color: #000;
+    font-weight: 600;
+}
+.filtro-select{
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    min-width: 210px;
+    font-weight: 700;
+}
+.btnLimparSeletor{
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btnLimparSeletor i{
+    font-size: 1.6em;
+}
+
+.todos-os-produtos >.container{
+   margin-right: 70px;
+}
+.todos-os-produtos h2{
+    margin-top: 40px;
+}
+
+.todos-os-produtos > .produtos > .cards > .card {
+  width: 250px;
+  min-width: 250px;
+}
+.btn-verproduto{
+    background-color: #ff0606;
+    color: #fff;
+    transition: transform .5s;
+}
+.btn-verproduto i{
+    margin-right: 5px;
+}
+.btn-verproduto:hover{
+    background-color: #e00a0a;
+    transform: scale(1.01);
+}
+.produtos {
+  padding: 10px 12px;
+}
+.produtos > .cards {
+  display: flex;
+  flex-wrap: wrap;  
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-bottom: 20px;
+}
+.produtos.container { max-width: 1200px; }
+
+.produtos > .cards > .card {
+  width: 300px;
+  min-width: 300px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
+  box-shadow:  0 8px 24px rgba(0,0,0,0.08);
+  transition: transform .35s cubic-bezier(.2,.9,.3,1), box-shadow .25s;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.produtos > .cards > .card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 50px rgba(16,25,40,0.12);
+}
+
+.img-produto {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f3f4f6;
+  margin-bottom: 12px;
+}
+
+.img-produto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.produtos > .cards .card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+.produtos > .cards .card h6 {
+  margin: 8px 0 0 0;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  padding: 0 8px;
+  height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.produtos > .cards .card .preco {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #000;
+  margin: 12px 0 0 0;
+}
+
+.produtos > .cards .card .btn-card {
+  width: calc(100% - 32px);
+  margin: 12px 16px 8px 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(90deg, #000 0%, #1f2937 100%);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s;
+  text-align: center;
+}
+
+.produtos > .cards .card .btn-card a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  width:100%;
+}
+.produtos > .cards .card .btn-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(16,25,40,0.12);
+}
+@media (max-width: 900px){
+    .barra-de-pesquisa{
+        width: 350px;
+    }
+    .barra-de-pesquisa .btn{
+        display: none;
+    }
+    main{
+        margin-top: 70px;
+    }
+    .categorias2{
+        display: none;
+    }
+    .topo{
+        margin: 30px 6%;
+    }
+    .caixa-filtro{
+        flex-wrap: nowrap;
+    }
+    .btnLimparSeletor{
+        display: none;
+    }
+    .todos-os-produtos h2{
+        margin-top: 50px;
+        font-size: 1.3em;
+    }
+    .todos-os-produtos > .produtos{
+        margin: 0 4%;
+    }
+    .todos-os-produtos > .produtos > .cards > .card {
+        width: 200px;
+        min-width: 200px;
+    }
+    .produtos > .cards {  
+        gap: 12px;
+    }
+    .produtos > .cards > .card {
+        width: 200px;
+        min-width: 200px;
+        height: 380px;
+    }
+    .img-produto {
+    width: 90%;
+    height: 180px;
+    }
+}
