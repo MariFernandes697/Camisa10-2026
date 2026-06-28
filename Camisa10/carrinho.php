@@ -7,6 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
 include "conexaoBD.php";
 // TRAVA DE SEGURANÇA: NÃO DEIXA ENTRAR NO CARRINHO SE NÃO TIVER LOGADO
 if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
+    $_SESSION['url_retorno'] = $_SERVER['REQUEST_URI'];
     echo "<script>
             alert('Para acessar o seu carrinho ou comprar, faça login primeiro!'); 
             window.location.href='loginCliente.php';
