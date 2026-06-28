@@ -135,6 +135,7 @@ $resultado = mysqli_query($conn, $buscarProdutos);
         </div>
     <?php endif; ?>
 </div>
+</div>
 <!-- Paginação Bootstrap -->
 <?php
 // Calcular o total de páginas
