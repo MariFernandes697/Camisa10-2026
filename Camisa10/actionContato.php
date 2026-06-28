@@ -2,13 +2,13 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
+
     $nome = $email = $mensagem = "";
     $erro = false;
 
     // Validações básicas
     if (empty($_POST["nomeContato"]) || empty($_POST["emailContato"]) || empty($_POST["mensagemContato"])) {
-        echo "<div class='alert alert-warning text-center m-5'>Todos os campos são obrigatórios!</div>";
+        echo "<script>alert('Todos os campos são obrigatórios!); window.history.back();</script>";
         $erro = true;
     } else {
         $nomeContato = filtrar_entrada($_POST["nomeContato"]);
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $inserirContato = "INSERT INTO formContato (nomeContato, emailContato, mensagemContato) VALUES ('$nomeContato', '$emailContato', '$mensagemContato')";
 
             if (mysqli_query($conn, $inserirContato)) {
-               echo "
+                echo "
                 <script>
                     alert('Sucesso! Sua mensagem foi enviada. Obrigado pelo contato!');
                     window.location.href = 'index.php#contato';
@@ -55,7 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("location:index.php");
 }
 
-function filtrar_entrada($dado) {
+function filtrar_entrada($dado)
+{
     $dado = trim($dado);
     $dado = stripslashes($dado);
     $dado = htmlspecialchars($dado);
